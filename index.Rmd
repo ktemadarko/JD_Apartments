@@ -1,0 +1,16 @@
+---
+title: "Home"
+output:
+  html_document:
+    theme: flatly
+---
+
+### Welcome to the JD Apartments website
+
+<br>
+
+## ![Frint view](images/IMG-20200721-WA0023.jpg "Front view")
+
+<br>
+
+Click on this [link](C:/Users/hp/Documents/JD_Apartments/_site/startpage.html "Overview of tenants") to see the overview of the tenants.

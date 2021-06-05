@@ -1,0 +1,83 @@
+---
+title: "Overview of tenants"
+
+date_updated: "2021-05-30"
+output:
+  html_document:
+    theme: flatly
+---
+
+<br> <br>
+
+## JD Apartments
+
+```{r load packages, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(DT)
+```
+
+```{r create tibble, message=FALSE, warning=FALSE, include=FALSE}
+achimota=tibble(Name=c("Fiifi","Michael Achiaa","Paula Achiaa","James Agyiri",
+                       "Nana Yaa Boakyewaa Manu","Gilbert Osei-Bonsu",
+                       "Palingwenge Yannick","Esther Otchere","Aisha","Mary Wiafe",
+                       "Flight Lieutenant Ohene Peprah", "Jeff Brown"),
+                Gender= factor(c(rep("Male",2),"Female","Male","Female",
+                                 rep("Male",2), rep("Female",3),
+                                  rep("Male",2))),
+                `Phone number`=c(rep(" ",10),"0545 485 666",rep(" ",1)),
+                `Household number`=c(3,2,rep(1,7),rep(2,1),3,5),
+                `Number of Adults`=c(rep(2,2),rep(1,8),rep(2,2)),
+                `Number of children`=c(1,rep(0,8),rep(1,2),rep(2,1)),
+                `Year stay started`=c(rep(2018,3),rep(2021,5),2019,2018,2020,2018),
+
+                `Building`=c(rep("Short block ",3),rep(" ",5),rep("JSS down",3),
+                             rep("Administration", 1)),
+                `Room type`=c(rep("Single room self-contained",5),
+                              "Chamber and hall",
+                              rep("Single room self-contained",4),
+                              "Chamber and hall", "2 bedroom"),
+                `One month security paid`=factor(c(rep("No",3),rep("Yes",5),
+                                                   rep("No",4))),
+                `Current Start date`=as.Date(c(rep("15/08/20",3),"15/02/2021",
+                                       "01/03/2021","21/02/2021",
+                                       "01/03/2021","26/04/2021",
+                                       "20/10/2019","15/08/2020","01/09/2020",
+                                       "01/09/2020"),
+                                     format="%d/%m/%y"),
+                `End date`= c("Negotiable",rep("15th August, 2021",2),
+                                               "15th January, 2023",
+                              "1st February, 2023","21st January, 2022",
+                              "1st February, 2022","26th April, 2022",
+                              "20th October, 2021","15th August, 2021",
+                              "1st September, 2021","1st September, 2021"),
+                
+                `Reminder date`=as.Date(c("01/06/2021",rep("15/06/2021",2),
+                                          "01/12/2022",
+                                       "15/01/2021","10/01/2021",
+                                       "15/01/2021","01/03/2021",
+                                       "20/8/2021","15/06/2021","01/07/2021",
+                                       "15/06/2021")
+                                       ,format="%d/%m/%Y"),
+                `Current Lease Duration`=c("12 months",rep("11 months",2),
+                                           rep("23 months",2),
+                             rep("11 months",2),"12 months", 
+                             "24 months",rep("12 months",3)),
+                `Monthly Rent paid`=c("Negotiable",rep("250",2), rep("500",2),
+                                      rep("900",3),"700","400","650", "700"),
+                
+                `Balance to be paid`=factor(c(rep("No",5),"1,800",
+                                              rep("No",6))),
+                `Rent renewed`=factor(c(rep("Yes",3),rep("No",6),rep("Yes",1),
+                                        rep("No",1),rep("Yes",1))),
+                `Length of old lease`=c(rep("24 months",3),rep(NA,6),
+                                        rep("24 months",1),rep(NA,1),
+                                        rep("24 months",1)),
+                `Agreement given to tenant`=factor(c(rep("No",3),rep("Yes",6),
+                                                     rep("No",3))),
+                `Former Tenant`=c(rep(NA,1),rep(" ",8),"Yvonne Gihoc","Mawusi",
+                                  rep(NA,1)))
+```
+
+```{r echo=FALSE}
+datatable(achimota)
+```

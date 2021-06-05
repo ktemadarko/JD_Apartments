@@ -1,0 +1,16 @@
+name: "JD_Apartments"
+
+navbar:
+  title: "JD_Apartments"
+  left:
+  - text: Home
+    href: index.html
+  - text: Tenants
+    href: startpage.html
+  - text: About
+    href: about.html
+  - text: License
+    href: license.html
+output:
+  html_document:
+    theme: darkly

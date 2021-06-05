@@ -1,0 +1,13 @@
+---
+title: "About"
+output:
+  html_document:
+    theme: flatly
+---
+
+Describe your project.
+
+```{r}
+sessionInfo()
+
+```
